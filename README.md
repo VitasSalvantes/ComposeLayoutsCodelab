@@ -17,8 +17,7 @@ of [Jetpack Compose pathway](https://developer.android.com/courses/pathways/comp
 
 ## How does it work
 
-The user opens the app and sees a scrollable list of strings and a button. When user clicks on a
-text, it changes color. When user clicks on the button, it changes color and the number of clicks.
+...
 
 ## Screenshots
 
@@ -48,16 +47,16 @@ After click on the button and on the text:
 
 ## Development progress
 
-Development of the project began and completed on **September 25, 2021**.
+Development of the project began and completed on **September 27, 2021**.
 
 *Since I am developing this project mainly alone, I see no reason to
 use [Trello](https://trello.com/).*
 
 ## Project statistics
 
-[![wakatime](https://wakatime.com/badge/github/VitasSalvantes/ComposeBasicsCodelab.svg)](https://wakatime.com/badge/github/VitasSalvantes/ComposeBasicsCodelab)
+[![wakatime](https://wakatime.com/badge/github/VitasSalvantes/ComposeLayoutsCodelab.svg)](https://wakatime.com/badge/github/VitasSalvantes/ComposeLayoutsCodelab)
 
-See more on [WakaTime](https://wakatime.com/@VitasSalvantes/projects/lwgyfslruv).
+See more on [WakaTime](https://wakatime.com/@VitasSalvantes/projects/hqltidofbq).
 
 ## How to install
 
