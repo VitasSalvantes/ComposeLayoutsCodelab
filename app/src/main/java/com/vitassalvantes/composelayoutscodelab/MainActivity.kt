@@ -31,7 +31,9 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-
+            ComposeLayoutsApp {
+                MyScreenContent()
+            }
         }
     }
 }
@@ -40,49 +42,19 @@ class MainActivity : ComponentActivity() {
  * Container function that sets theme and color for all elements on screen
  */
 @Composable
-fun ComposeLayoutsApp(content: @Composable () -> Unit) {
+fun ComposeLayoutsApp(content: @Composable (Modifier) -> Unit) {
     ComposeLayoutsCodelabTheme {
-        content()
+        Scaffold() { innerPadding ->
+            content(Modifier.padding(innerPadding))
+        }
     }
 }
 
 @Composable
-fun MyScreenContent() {
-    PhotographerCard()
-}
-
-@Composable
-fun PhotographerCard(modifier: Modifier = Modifier) {
-    Row(
-        modifier
-            .padding(8.dp)
-            .clip(RoundedCornerShape(4.dp))
-            .background(MaterialTheme.colors.surface)
-            .clickable { /* Some code */ }
-            .padding(16.dp)
-    ) {
-        Surface(
-            modifier.size(50.dp),
-            shape = CircleShape,
-            color = MaterialTheme.colors.onSurface.copy(alpha = 0.2f)
-        ) {
-            Image(
-                painter = painterResource(id = R.drawable.ic_launcher_background),
-                contentDescription = "Photo"
-            )
-        }
-
-        Column(
-            modifier
-                .padding(start = 8.dp)
-                .align(Alignment.CenterVertically)
-        ) {
-            Text(text = "Alfred Sisley", fontWeight = FontWeight.Bold)
-            // LocalContentAlpha is defining opacity level of its children
-            CompositionLocalProvider(LocalContentAlpha provides ContentAlpha.medium) {
-                Text(text = "3 minutes ago", style = MaterialTheme.typography.body2)
-            }
-        }
+fun MyScreenContent(modifier: Modifier = Modifier) {
+    Column(modifier = modifier) {
+        Text(text = "Hi there!")
+        Text(text = "Thanks for going through the Layouts codelab")
     }
 }
 
