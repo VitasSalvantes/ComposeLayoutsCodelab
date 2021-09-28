@@ -44,7 +44,15 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun ComposeLayoutsApp(content: @Composable (Modifier) -> Unit) {
     ComposeLayoutsCodelabTheme {
-        Scaffold() { innerPadding ->
+        Scaffold(
+            topBar = {
+                TopAppBar(
+                    title = {
+                        Text(text = "ComposeLayoutsApp")
+                    }
+                )
+            }
+        ) { innerPadding ->
             content(Modifier.padding(innerPadding))
         }
     }
